@@ -152,8 +152,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="iu7-wp-5KL"/>
                     <connections>
-                        <outlet property="ageLabel" destination="xOZ-ZT-ndv" id="jYQ-8i-wXd"/>
-                        <outlet property="nameLabel" destination="4rh-aL-fzi" id="F3o-AU-9aB"/>
+                        <outlet property="ageLabel" destination="4rh-aL-fzi" id="G2r-hv-6E0"/>
+                        <outlet property="nameLabel" destination="xOZ-ZT-ndv" id="s1i-9O-aMD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="erK-I0-dQo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
