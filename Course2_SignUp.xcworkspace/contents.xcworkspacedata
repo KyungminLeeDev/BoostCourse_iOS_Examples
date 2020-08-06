@@ -5,9 +5,9 @@
       location = "group:README.md">
    </FileRef>
    <FileRef
-      location = "group:ImagePicker/ImagePicker.xcodeproj">
+      location = "group:ViewTransition/ViewTransition.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:ViewTransition/ViewTransition.xcodeproj">
+      location = "group:ImagePicker/ImagePicker.xcodeproj">
    </FileRef>
 </Workspace>
