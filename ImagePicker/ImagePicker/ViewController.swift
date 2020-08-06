@@ -27,6 +27,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.dismiss(animated: true, completion: nil)
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let originalImage: UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            self.imageView.image = originalImage
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
