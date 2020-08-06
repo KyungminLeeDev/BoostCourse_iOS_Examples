@@ -17,4 +17,6 @@ class UserInformation {
     var name: String?
     var age: String?
     
+    // 다른곳에서 객체생성이 불가능하게 한다.
+    private init() {}
 }
