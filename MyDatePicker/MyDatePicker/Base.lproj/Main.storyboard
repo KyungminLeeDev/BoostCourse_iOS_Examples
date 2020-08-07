@@ -17,6 +17,9 @@
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="108-gj-BCN">
                                 <rect key="frame" x="0.0" y="20" width="375" height="216"/>
+                                <connections>
+                                    <action selector="didDatePickerValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="210-Bg-YZG"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elu-b0-aXC">
                                 <rect key="frame" x="16" y="256" width="343" height="21"/>
@@ -36,6 +39,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="elu-b0-aXC" id="TlD-Ku-leC"/>
+                        <outlet property="datePicker" destination="108-gj-BCN" id="GtM-KP-z1V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
