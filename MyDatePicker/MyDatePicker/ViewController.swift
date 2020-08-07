@@ -12,6 +12,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var dateLabel: UILabel!
+    
+    @IBAction func didDatePickerValueChanged(_ sender: UIDatePicker) {
+        print("value change")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
