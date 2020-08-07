@@ -12,6 +12,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var dateLabel: UILabel!
+    let dateFormatter: DateFormatter = {
+        let formatter: DateFormatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter
+    }()
     
     @IBAction func didDatePickerValueChanged(_ sender: UIDatePicker) {
         print("value change")
