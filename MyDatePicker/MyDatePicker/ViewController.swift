@@ -15,11 +15,20 @@ class ViewController: UIViewController {
     let dateFormatter: DateFormatter = {
         let formatter: DateFormatter = DateFormatter()
         formatter.dateStyle = .medium
+        formatter.timeStyle = .medium
         return formatter
     }()
     
     @IBAction func didDatePickerValueChanged(_ sender: UIDatePicker) {
         print("value change")
+        
+        // 데이트피커에서 날짜 가져와서 데이트포맷터로 문자열 양식으로 변환하기
+        // sender로도 가져올 수 있다. (datePicker 아웃렛을 사용안한다면 sender로 가져와야함)
+        let date: Date = self.datePicker.date
+        let dateString: String = self.dateFormatter.string(from: date)
+        
+        // 레이블에 띄우기
+        self.dateLabel.text = dateString
     }
 
     override func viewDidLoad() {
