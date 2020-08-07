@@ -14,8 +14,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     let dateFormatter: DateFormatter = {
         let formatter: DateFormatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .medium
+        
+        // 미리 지정된 스타일 사용
+//        formatter.dateStyle = .medium
+//        formatter.timeStyle = .medium
+        
+        // 커스텀 스타일 사용
+        formatter.dateFormat = "yyyy/MM/dd hh:mm:ss"
+        
         return formatter
     }()
     
