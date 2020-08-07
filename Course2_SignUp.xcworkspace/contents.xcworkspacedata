@@ -10,4 +10,7 @@
    <FileRef
       location = "group:ImagePicker/ImagePicker.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:MyDatePicker/MyDatePicker.xcodeproj">
+   </FileRef>
 </Workspace>
