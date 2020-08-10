@@ -31,7 +31,11 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="AsD-3M-OZz"/>
+                <tapGestureRecognizer id="AsD-3M-OZz">
+                    <connections>
+                        <action selector="tapView:" destination="BYZ-38-t0r" id="Xn0-tn-x0q"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-58.399999999999999" y="137.18140929535232"/>
         </scene>
