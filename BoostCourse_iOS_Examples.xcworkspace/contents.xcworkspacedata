@@ -13,4 +13,7 @@
    <FileRef
       location = "group:MyDatePicker/MyDatePicker.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:TabGesture/TabGesture.xcodeproj">
+   </FileRef>
 </Workspace>
