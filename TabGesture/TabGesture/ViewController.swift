@@ -23,7 +23,9 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         
         /* 델리게이트로 구현하기 위해 주석처리
         // 코드로 구현
+        // 액션 타깃을 통한 제스처 인식기 초기화 및 생성
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.tapView(_:)))
+         // 뷰에 제스처 인식기 연결하기
         self.view.addGestureRecognizer(tapGesture)
         */
         
