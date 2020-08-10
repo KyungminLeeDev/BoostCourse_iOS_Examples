@@ -6,6 +6,8 @@
 
 
 
+<br/><br/><br/>
+
 # 요약정리 게시글 링크
 
 1. 음원 재생기 애플리케이션 (예정)
@@ -22,6 +24,8 @@
     7. [Gesture Recognizer](https://kyungminleedev.github.io/notes/Boostcourse-iOS-2-SignUp-7/)
 
 
+
+<br/><br/><br/>
 
 # 참고 문서/링크
 
