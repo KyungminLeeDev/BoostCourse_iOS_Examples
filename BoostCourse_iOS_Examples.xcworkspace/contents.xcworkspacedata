@@ -16,4 +16,7 @@
    <FileRef
       location = "group:TabGesture/TabGesture.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:SimpleTable/SimpleTable.xcodeproj">
+   </FileRef>
 </Workspace>
