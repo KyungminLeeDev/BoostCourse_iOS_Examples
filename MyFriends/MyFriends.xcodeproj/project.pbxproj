@@ -13,6 +13,7 @@
 		5639BB372500E7FE0061552F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5639BB352500E7FE0061552F /* Main.storyboard */; };
 		5639BB392500E8000061552F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5639BB382500E8000061552F /* Assets.xcassets */; };
 		5639BB3C2500E8000061552F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5639BB3A2500E8000061552F /* LaunchScreen.storyboard */; };
+		5639BB442500E90E0061552F /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5639BB432500E90E0061552F /* Friend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5639BB382500E8000061552F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5639BB3B2500E8000061552F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5639BB3D2500E8000061552F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5639BB432500E90E0061552F /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				5639BB2F2500E7FE0061552F /* AppDelegate.swift */,
 				5639BB312500E7FE0061552F /* SceneDelegate.swift */,
 				5639BB332500E7FE0061552F /* ViewController.swift */,
+				5639BB432500E90E0061552F /* Friend.swift */,
 				5639BB352500E7FE0061552F /* Main.storyboard */,
 				5639BB382500E8000061552F /* Assets.xcassets */,
 				5639BB3A2500E8000061552F /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				5639BB342500E7FE0061552F /* ViewController.swift in Sources */,
 				5639BB302500E7FE0061552F /* AppDelegate.swift in Sources */,
 				5639BB322500E7FE0061552F /* SceneDelegate.swift in Sources */,
+				5639BB442500E90E0061552F /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
