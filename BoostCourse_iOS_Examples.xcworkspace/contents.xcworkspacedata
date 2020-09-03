@@ -2,10 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:README.md">
+   </FileRef>
+   <FileRef
       location = "group:JSONEncoderDecoder.playground">
    </FileRef>
    <FileRef
-      location = "group:README.md">
+      location = "group:MyFriends/MyFriends.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:ViewTransition/ViewTransition.xcodeproj">
