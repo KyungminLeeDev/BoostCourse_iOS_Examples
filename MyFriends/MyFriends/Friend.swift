@@ -22,7 +22,7 @@ import Foundation
 struct Friend: Codable {
     struct Address: Codable {
         let country: String
-        let age: Int
+        let city: String
     }
     
     let name: String
