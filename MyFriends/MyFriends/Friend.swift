@@ -27,5 +27,18 @@ struct Friend: Codable {
     
     let name: String
     let age: Int
-    let address_info: Address
+    let adressInfo: Address
+    
+    var nameAndAge: String {
+        return name + "(\(age))"
+    }
+    
+    var fullAdress: String {
+        return adressInfo.city + ", " + adressInfo.country
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case name, age
+        case adressInfo = "address_info"
+    }
 }

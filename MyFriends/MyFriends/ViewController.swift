@@ -43,8 +43,8 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         let friend: Friend = friends[indexPath.row]
         
-        cell.textLabel?.text = friend.name + "(\(friend.age))"
-        cell.detailTextLabel?.text = friend.address_info.city + ", " + friend.address_info.country
+        cell.textLabel?.text = friend.nameAndAge
+        cell.detailTextLabel?.text = friend.fullAdress
         
         
         return cell
