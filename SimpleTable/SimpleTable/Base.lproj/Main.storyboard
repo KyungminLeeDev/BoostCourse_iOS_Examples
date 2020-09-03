@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CYZ-dD-YHg">
-                                    <rect key="frame" x="0.0" y="117" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="160.5" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Add Data"/>
                                     <connections>
@@ -43,6 +43,40 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" id="q0B-TX-ETh" customClass="CustomTableViewCell" customModule="SimpleTable" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="99" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q0B-TX-ETh" id="8MA-MU-uNh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwN-VG-dx9">
+                                                    <rect key="frame" x="15" y="11" width="42" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQo-9N-plg">
+                                                    <rect key="frame" x="318" y="11" width="42" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="fwN-VG-dx9" secondAttribute="bottom" id="13C-S8-IFl"/>
+                                                <constraint firstItem="fwN-VG-dx9" firstAttribute="leading" secondItem="8MA-MU-uNh" secondAttribute="leadingMargin" id="TTL-hq-X9O"/>
+                                                <constraint firstItem="fwN-VG-dx9" firstAttribute="top" secondItem="8MA-MU-uNh" secondAttribute="topMargin" id="Zwi-jb-Hvu"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hQo-9N-plg" secondAttribute="bottom" id="d4i-XK-Whi"/>
+                                                <constraint firstItem="hQo-9N-plg" firstAttribute="top" secondItem="8MA-MU-uNh" secondAttribute="topMargin" id="j1I-S1-12k"/>
+                                                <constraint firstItem="hQo-9N-plg" firstAttribute="trailing" secondItem="8MA-MU-uNh" secondAttribute="trailingMargin" id="lmq-s3-2oK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="leftLabel" destination="fwN-VG-dx9" id="5Mf-t6-tHL"/>
+                                            <outlet property="rightLabel" destination="hQo-9N-plg" id="7o7-bN-Ztw"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

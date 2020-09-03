@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableview: UITableView!
     
     let cellIdentifier: String = "cell"
+    let customCellIdentifier: String = "customCell"
     
     let korean: [String] = ["가", "나", "다", "라", "마", "바", "사", "아", "자", "차", "카", "타", "파", "하"]
     let english: [String] = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
@@ -24,6 +25,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let dateFormatter: DateFormatter = {
         let formatter: DateFormatter = DateFormatter()
         formatter.dateStyle = .medium
+        return formatter
+    }()
+    
+    let timeFormatter: DateFormatter = {
+        let formatter: DateFormatter = DateFormatter()
         formatter.timeStyle = .medium
         return formatter
     }()
@@ -69,16 +75,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // row에 해당하는 cell을 달라
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        
+
         if indexPath.section < 2 {
+            let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
             let text: String = indexPath.section == 0 ? korean[indexPath.row] : english[indexPath.row]
             cell.textLabel?.text = text
+            
+            return cell
         } else {
-            cell.textLabel?.text = dateFormatter.string(from: dates[indexPath.row])
+            let cell: CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: customCellIdentifier, for: indexPath) as! CustomTableViewCell
+            
+            cell.leftLabel.text = dateFormatter.string(from: dates[indexPath.row])
+            cell.rightLabel.text = timeFormatter.string(from: dates[indexPath.row])
+            
+            return cell
         }
         
-        return cell
+        
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
