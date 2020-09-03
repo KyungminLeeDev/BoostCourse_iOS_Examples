@@ -81,6 +81,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let text: String = indexPath.section == 0 ? korean[indexPath.row] : english[indexPath.row]
             cell.textLabel?.text = text
             
+            if indexPath.row == 1 {
+                cell.backgroundColor = UIColor.red
+            } else {
+                cell.backgroundColor = UIColor.white
+            }
+            
             return cell
         } else {
             let cell: CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: customCellIdentifier, for: indexPath) as! CustomTableViewCell
