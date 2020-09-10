@@ -8,9 +8,6 @@
       location = "group:JSONEncoderDecoder.playground">
    </FileRef>
    <FileRef
-      location = "group:MyFriends/MyFriends.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:ViewTransition/ViewTransition.xcodeproj">
    </FileRef>
    <FileRef
@@ -24,5 +21,11 @@
    </FileRef>
    <FileRef
       location = "group:SimpleTable/SimpleTable.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MyFriends/MyFriends.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:PhotosExample/PhotosExample.xcodeproj">
    </FileRef>
 </Workspace>
