@@ -4,28 +4,47 @@
    <FileRef
       location = "group:README.md">
    </FileRef>
-   <FileRef
-      location = "group:JSONEncoderDecoder.playground">
-   </FileRef>
-   <FileRef
-      location = "group:ViewTransition/ViewTransition.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:ImagePicker/ImagePicker.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:MyDatePicker/MyDatePicker.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:TabGesture/TabGesture.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:SimpleTable/SimpleTable.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:MyFriends/MyFriends.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:PhotosExample/PhotosExample.xcodeproj">
-   </FileRef>
+   <Group
+      location = "container:"
+      name = "1. &#xc74c;&#xc6d0; &#xc7ac;&#xc0dd;&#xae30; &#xc560;&#xd50c;&#xb9ac;&#xcf00;&#xc774;&#xc158;">
+      <FileRef
+         location = "group:MusicPlayer/MusicPlayer.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "2. &#xd68c;&#xc6d0;&#xac00;&#xc785; &#xd654;&#xba74; &#xad6c;&#xd604;">
+      <FileRef
+         location = "group:MyDatePicker/MyDatePicker.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:ImagePicker/ImagePicker.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:TabGesture/TabGesture.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:ViewTransition/ViewTransition.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "3. &#xae30;&#xc0c1;&#xc815;&#xbcf4; &#xc560;&#xd50c;&#xb9ac;&#xcf00;&#xc774;&#xc158;">
+      <FileRef
+         location = "group:JSONEncoderDecoder.playground">
+      </FileRef>
+      <FileRef
+         location = "group:SimpleTable/SimpleTable.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:MyFriends/MyFriends.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "4. &#xb0b4; &#xc0ac;&#xc9c4; &#xad00;&#xb9ac; &#xc560;&#xd50c;&#xb9ac;&#xcf00;&#xc774;&#xc158;">
+      <FileRef
+         location = "group:PhotosExample/PhotosExample.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>
