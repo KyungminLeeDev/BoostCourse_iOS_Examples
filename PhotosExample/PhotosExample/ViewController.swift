@@ -9,7 +9,7 @@
 import UIKit
 import Photos
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PHPhotoLibraryChangeObserver {
     
     @IBOutlet weak var tableView: UITableView!
     var fetchResut: PHFetchResult<PHAsset>!
@@ -47,9 +47,11 @@ class ViewController: UIViewController, UITableViewDataSource {
             })
         case .restricted:
             print("접근 제한")
+        default:
+            print("default")
         }
         
-        
+        PHPhotoLibrary.shared().register(self)
     }
     
     func requestCollection() {
@@ -91,5 +93,34 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
+    
+    // 테이블 뷰 row를 밀어서 삭제할 수 있게 할건지 묻는
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let asset: PHAsset = self.fetchResut[indexPath.row]
+            
+            PHPhotoLibrary.shared().performChanges({
+                PHAssetChangeRequest.deleteAssets([asset] as NSArray)
+            }, completionHandler: nil)
+        }
+    }
+    
+    func photoLibraryDidChange(_ changeInstance: PHChange) {
+        guard let changes = changeInstance.changeDetails(for: fetchResut) else {
+            return
+        }
+        
+        fetchResut = changes.fetchResultAfterChanges
+        
+        OperationQueue.main.addOperation {
+            self.tableView.reloadSections(IndexSet(0...0), with: .automatic)
+        }
+        
+    }
+    
 }
 
