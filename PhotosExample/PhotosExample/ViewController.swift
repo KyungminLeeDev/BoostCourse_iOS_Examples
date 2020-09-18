@@ -80,9 +80,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let asset: PHAsset = fetchResut.object(at: indexPath.row)
         
+//        imageMaager.requestImage(for: asset,
+//                                 targetSize: CGSize(width: 30, height: 30),
+//                                 contentMode: .aspectFill,
+//                                 options: nil,
+//                                 resultHandler: { image, _ in
+//                                    cell.imageView?.image = image
+//        })
         // 이미지 요청
         let options: PHImageRequestOptions = PHImageRequestOptions()
-        options.resizeMode = PHImageRequestOptionsResizeMode.exact
+        options.resizeMode = .exact
         imageMaager.requestImage(for: asset,
                                  targetSize: CGSize(width: 30, height: 30),
                                  contentMode: .aspectFill,
