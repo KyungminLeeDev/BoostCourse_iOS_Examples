@@ -16,6 +16,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var imageMaager: PHCachingImageManager = PHCachingImageManager()
     let cellIdentifier: String = "cell"
     
+    @IBAction func touchUpRefreshButton(_ sender: UIBarButtonItem) {
+        tableView.reloadSections(IndexSet(0...0), with: .automatic)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
