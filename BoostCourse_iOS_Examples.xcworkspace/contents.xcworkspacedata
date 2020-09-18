@@ -46,5 +46,8 @@
       <FileRef
          location = "group:PhotosExample/PhotosExample.xcodeproj">
       </FileRef>
+      <FileRef
+         location = "group:AsyncExample/AsyncExample.xcodeproj">
+      </FileRef>
    </Group>
 </Workspace>
