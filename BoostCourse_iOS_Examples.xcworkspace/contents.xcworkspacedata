@@ -5,6 +5,31 @@
       location = "group:README.md">
    </FileRef>
    <Group
+      location = "group:Documents"
+      name = "Documents">
+      <FileRef
+         location = "group:/Users/kyungminlee/Documents/Github_Local/BoostCourse_iOS/Examples/Documents/view_controller_catalog_for_iOS.pdf">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/kyungminlee/Documents/Github_Local/BoostCourse_iOS/Examples/Documents/concurrency_programming_guide_operation_queue.pdf">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/kyungminlee/Documents/Github_Local/BoostCourse_iOS/Examples/Documents/collection_view_programming_guide_for_iOS.pdf">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/kyungminlee/Documents/Github_Local/BoostCourse_iOS/Examples/Documents/app_programming_guide_for_iOS.pdf">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/kyungminlee/Documents/Github_Local/BoostCourse_iOS/Examples/Documents/human_interface_guidline_for_iOS.pdf">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/kyungminlee/Documents/Github_Local/BoostCourse_iOS/Examples/Documents/cocoa_core_competencies.pdf">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/kyungminlee/Documents/Github_Local/BoostCourse_iOS/Examples/Documents/table_view_programming_guide_for_iOS.pdf">
+      </FileRef>
+   </Group>
+   <Group
       location = "container:"
       name = "1. &#xc74c;&#xc6d0; &#xc7ac;&#xc0dd;&#xae30; &#xc560;&#xd50c;&#xb9ac;&#xcf00;&#xc774;&#xc158;">
       <FileRef
