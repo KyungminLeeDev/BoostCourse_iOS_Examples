@@ -74,5 +74,8 @@
       <FileRef
          location = "group:AsyncExample/AsyncExample.xcodeproj">
       </FileRef>
+      <FileRef
+         location = "group:FriendsCollection/FriendsCollection.xcodeproj">
+      </FileRef>
    </Group>
 </Workspace>
