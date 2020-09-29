@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableView: UITableView!
     var fetchResult: PHFetchResult<PHAsset>!
-    var imageMaager: PHCachingImageManager = PHCachingImageManager()
+    var imageManager: PHCachingImageManager = PHCachingImageManager()
     let cellIdentifier: String = "cell"
     
     @IBAction func touchUpRefreshButton(_ sender: UIBarButtonItem) {
@@ -94,7 +94,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // 이미지 요청
         let options: PHImageRequestOptions = PHImageRequestOptions()
         options.resizeMode = .exact
-        imageMaager.requestImage(for: asset,
+        imageManager.requestImage(for: asset,
                                  targetSize: CGSize(width: 30, height: 30),
                                  contentMode: .aspectFill,
                                  options: options,
