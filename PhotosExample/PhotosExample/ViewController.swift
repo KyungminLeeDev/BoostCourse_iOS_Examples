@@ -12,7 +12,7 @@ import Photos
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PHPhotoLibraryChangeObserver {
     
     @IBOutlet weak var tableView: UITableView!
-    var fetchResut: PHFetchResult<PHAsset>!
+    var fetchResult: PHFetchResult<PHAsset>!
     var imageMaager: PHCachingImageManager = PHCachingImageManager()
     let cellIdentifier: String = "cell"
     
@@ -71,18 +71,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let fetchOptions = PHFetchOptions()
         fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         // 가져온 결과를 fetchResult 프로퍼티로 가져오기
-        fetchResut = PHAsset.fetchAssets(in: cameraRollCollection, options: fetchOptions)
+        fetchResult = PHAsset.fetchAssets(in: cameraRollCollection, options: fetchOptions)
         
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fetchResut?.count ?? 0
+        return fetchResult?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         
-        let asset: PHAsset = fetchResut.object(at: indexPath.row)
+        let asset: PHAsset = fetchResult.object(at: indexPath.row)
         
 //        imageMaager.requestImage(for: asset,
 //                                 targetSize: CGSize(width: 30, height: 30),
@@ -112,7 +112,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let asset: PHAsset = self.fetchResut[indexPath.row]
+            let asset: PHAsset = self.fetchResult[indexPath.row]
             
             PHPhotoLibrary.shared().performChanges({
                 PHAssetChangeRequest.deleteAssets([asset] as NSArray)
@@ -121,11 +121,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func photoLibraryDidChange(_ changeInstance: PHChange) {
-        guard let changes = changeInstance.changeDetails(for: fetchResut) else {
+        guard let changes = changeInstance.changeDetails(for: fetchResult) else {
             return
         }
         
-        fetchResut = changes.fetchResultAfterChanges
+        fetchResult = changes.fetchResultAfterChanges
         
         OperationQueue.main.addOperation {
             self.tableView.reloadSections(IndexSet(0...0), with: .automatic)
@@ -146,7 +146,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             return
         }
         
-        nextViewController.asset = fetchResut[index.row]
+        nextViewController.asset = fetchResult[index.row]
     }
     
 }
