@@ -11,7 +11,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     let cellIdentifier: String = "friendCell"
-    
+    var friends: [Friend] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
