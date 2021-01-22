@@ -40,7 +40,11 @@ class ViewController: UIViewController, UITableViewDataSource {
             do {
                 let apiResponse: APIResponse = try JSONDecoder().decode(APIResponse.self, from: data)
                 self.friends = apiResponse.results
-                self.tableView.reloadData()
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                
             } catch(let error) {
                 print(error.localizedDescription)
             }
@@ -55,14 +59,26 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         cell.textLabel?.text = friend.name.full
         cell.detailTextLabel?.text = friend.email
+        cell.imageView?.image = nil
         
-        guard let imageURL: URL = URL(string: friend.picture.thumbnail) else {
-            return cell
+        DispatchQueue.global().async {
+            guard let imageURL: URL = URL(string: friend.picture.thumbnail) else {
+                return
+            }
+            guard let imageData: Data = try? Data(contentsOf: imageURL) else {
+                return
+            }
+            
+            DispatchQueue.main.async {
+                if let index: IndexPath = tableView.indexPath(for: cell) {
+                    if index.row == indexPath.row {
+                        cell.imageView?.image = UIImage(data: imageData)
+                        cell.setNeedsLayout()
+                        cell.layoutIfNeeded()
+                    }
+                }
+            }
         }
-        guard let imageData: Data = try? Data(contentsOf: imageURL) else {
-            return cell
-        }
-        cell.imageView?.image = UIImage(data: imageData)
         
         return cell
     }
