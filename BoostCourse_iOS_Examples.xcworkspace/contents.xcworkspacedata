@@ -78,4 +78,11 @@
          location = "group:FriendsCollection/FriendsCollection.xcodeproj">
       </FileRef>
    </Group>
+   <Group
+      location = "container:"
+      name = "5. &#xc601;&#xd654;&#xc815;&#xbcf4; &#xc560;&#xd50c;&#xb9ac;&#xcf00;&#xc774;&#xc158;">
+      <FileRef
+         location = "group:Networking">
+      </FileRef>
+   </Group>
 </Workspace>
